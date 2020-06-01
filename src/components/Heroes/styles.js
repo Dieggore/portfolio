@@ -2,21 +2,23 @@ import styled from 'styled-components';
 import { flexboxColumn } from '../../styles/helpers';
 
 export const HeroWrapper = styled.section`
-  height: 1860px;
-  width: 100%;
-  background: ${({ frameNumber }) => frameNumber <= 12 ? `url(img/diego000${frameNumber}.png) center no-repeat` : `url(img/diego00001.png) center no-repeat`};
-  background-size: cover;
+  height: 920px;
+  width: 100%; 
+  background: ${({ frameNumber }) => `url(img/${frameNumber}.png) no-repeat`};
+  background-size: contain;
+  background-position: top 0px right 50%;
   background-color: black;
   display: flex;
+  position: sticky;
 `;
 
 export const WelcomeWrapper = styled.article`
   ${flexboxColumn};
   justify-content: space-between;
-  width: 30%;
+  width: 50%;
   margin: auto;
   align-self: flex-start;
-  padding-top: 82rem;
+  padding-top: 10rem;
 `;
 
 export const HelloLine = styled.h1`

@@ -33,10 +33,14 @@ export const SocialLinksWrapper = styled.div`
 export const StyledHeader = styled.header`
   ${flexboxRow};
   position: absolute;
+  background-color: black;
   width: 100%;
   top: 0;
+  z-index: 1;
   justify-content: space-between;
   height: 115px;
   padding: 0rem 5rem;
+  position: sticky;
+  
 `;
 
