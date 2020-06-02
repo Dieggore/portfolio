@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export const HeroWrapper = styled(motion.section)`
   height: 100vh;
   width: 100%; 
-  background: ${({ frameNumber }) => `url(img/guitarColored/${frameNumber}.png) no-repeat`};
+  background: ${({ frameNumber }) => `url(img/guitarColoredJPG/${frameNumber}.jpg) no-repeat`};
   background-size: cover;
   background-position: top 0px right 50%;
   background-color: black;
