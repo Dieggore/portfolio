@@ -1,26 +1,40 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { flexboxRow } from '../../styles/helpers';
-
-// export const GithubLogo = styled(githubLogoSvg)`
-//   height: 40px;
-//   width: 40px;
-// `;
-
-// export const LinkedInLogo = styled(linkedInLogoSvg)`
-//   height: 40px;
-//   width: 40px;
-// `;
 
 export const NavItem = styled.a`
   color: white;
   font-size: 24px;
   font-weight: 600;
+  cursor: pointer;
 `;
+
+export const NavMenu = styled.div`
+  ${flexboxRow};
+  justify-content: space-between;
+  width: 144px;
+  background-color: black;
+`;
+
+export const SvgWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24px;
+  min-height: 24px;
+  background: inherit;
+`
+export const InlineSvg = styled.svg`
+  height: 24px;
+  width: 24px;
+  color: white;
+  fill: currentColor;
+`
 
 export const NavWrapper = styled.nav`
   ${flexboxRow};
   justify-content: space-between;
-  width: 144px;
+  width: 100%;
 `;
 
 export const SocialLinksWrapper = styled.div`
@@ -30,7 +44,7 @@ export const SocialLinksWrapper = styled.div`
   background-color: black;
 `;
 
-export const StyledHeader = styled.header`
+export const StyledHeader = styled(motion.header)`
   ${flexboxRow};
   position: absolute;
   background-color: black;

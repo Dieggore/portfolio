@@ -15,6 +15,7 @@ export const typography = css`
   }
 
   body {
+    background-color: black;
     font-family: '${ROBOTO}';
     font-size: 1rem;
     line-height: 1.25rem;

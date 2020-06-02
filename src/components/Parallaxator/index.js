@@ -13,7 +13,7 @@ import {
   setTransformValues,
 } from './helpers'
 
-export default function ParallaxItem({ children }) {
+export default function ParallaxItem({ yStart = 10, children }) {
   const ref = useRef()
   const [offsetTop, setOffsetTop] = useState(0)
   const [minHeight, setMinHeight] = useState('auto')
@@ -38,7 +38,7 @@ export default function ParallaxItem({ children }) {
 
   return (
     <div style={{ minHeight }}>
-      <motion.div ref={ref} initial={{ y: 0 }} style={{ y }}>
+      <motion.div ref={ref} initial={{ y: yStart }} style={{ y }}>
         {children}
       </motion.div>
     </div>

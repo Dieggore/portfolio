@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTransform, useViewportScroll } from "framer-motion";
 import { HeroWrapper, WelcomeWrapper, HelloLine, GreetingLine } from './styles';
+import { DISOLVE_IN } from '../../utils/animations';
 
 const getFrameValue = (frameNumber) => { 
   const roundedFrameNumber = Math.round(frameNumber) 
@@ -15,11 +16,11 @@ const ScrollableHero = () => {
   const [value, setValue] = useState(1);
   useEffect(() => y.onChange(v => setValue(v)), [y]);
   return (
-    <HeroWrapper frameNumber={getFrameValue(value)}>
+    <HeroWrapper {...DISOLVE_IN} frameNumber={getFrameValue(value)}>
       <WelcomeWrapper>
         <HelloLine>Hello, <span>I'm Diego!</span></HelloLine>
         <GreetingLine>
-          Nice to meet you! I'm a Web Developer who Ioves bringing ideas to life. 
+          Nice to meet you! 
         </GreetingLine>
       </WelcomeWrapper>
     </HeroWrapper>

@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { flexboxColumn } from '../../styles/helpers';
+import { motion } from 'framer-motion';
 
-export const HeroWrapper = styled.section`
-  height: 920px;
+export const HeroWrapper = styled(motion.section)`
+  height: 100vh;
   width: 100%; 
-  background: ${({ frameNumber }) => `url(img/${frameNumber}.png) no-repeat`};
-  background-size: contain;
+  background: ${({ frameNumber }) => `url(img/guitarColored/${frameNumber}.png) no-repeat`};
+  background-size: cover;
   background-position: top 0px right 50%;
   background-color: black;
   display: flex;
@@ -14,11 +15,12 @@ export const HeroWrapper = styled.section`
 
 export const WelcomeWrapper = styled.article`
   ${flexboxColumn};
-  justify-content: space-between;
-  width: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #0000007d;
   margin: auto;
   align-self: flex-start;
-  padding-top: 10rem;
+
 `;
 
 export const HelloLine = styled.h1`
