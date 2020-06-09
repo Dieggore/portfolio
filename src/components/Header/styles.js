@@ -41,13 +41,13 @@ export const SocialLinksWrapper = styled.div`
   ${flexboxRow};
   justify-content: space-between;
   width: 144px;
-  background-color: black;
+  // background-color: black;
 `;
 
 export const StyledHeader = styled(motion.header)`
   ${flexboxRow};
   position: absolute;
-  background-color: black;
+  background: black;
   width: 100%;
   top: 0;
   z-index: 1;

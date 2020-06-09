@@ -7,7 +7,6 @@ import About from '../components/About';
 const IndexPage = () => (
   <Layout>
     <ScrollableHero />
-    <About />
   </Layout>
 );
 

@@ -2,25 +2,29 @@ import styled from 'styled-components';
 import { flexboxColumn } from '../../styles/helpers';
 import { motion } from 'framer-motion';
 
-export const HeroWrapper = styled(motion.section)`
-  height: 100vh;
-  width: 100%; 
-  background: ${({ frameNumber }) => `url(img/guitarColoredJPG/${frameNumber}.jpg) no-repeat`};
-  background-size: cover;
-  background-position: top 0px right 50%;
-  background-color: black;
-  display: flex;
+export const HeroWrapper = styled.section`
+  display: grid;
+  height: 500vh;
   position: sticky;
+  
+  background: linear-gradient(180deg,rgba(0, 0, 0, 0.92) 0%,rgb(142, 140, 140) 8%,rgb(0, 0, 0) 12%);
+  //background: linear-gradient(180deg,rgba(255, 255, 255, 0.92) 0%,rgb(4, 4, 4) 11%,rgb(0, 0, 0) 100%);
+`;
+
+export const FrameAnimation = styled(motion.img)`
+  width: 80%;
+  margin: auto;
+  height: auto;
+  display: inline-block;
+  // object-fit: contain;
+  position: sticky;
+  top: -10px;
+  z-index: -1;
 `;
 
 export const WelcomeWrapper = styled.article`
   ${flexboxColumn};
-  width: 100%;
-  height: 100%;
   background-color: #0000007d;
-  margin: auto;
-  align-self: flex-start;
-
 `;
 
 export const HelloLine = styled.h1`
