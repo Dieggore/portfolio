@@ -16,7 +16,7 @@ export const FrameAnimation = styled(motion.img)`
   margin: auto;
   height: auto;
   display: inline-block;
-  // object-fit: contain;
+  object-fit: contain;
   position: sticky;
   top: -10px;
   z-index: -1;
