@@ -4,37 +4,32 @@ import {
   useTransform,
   useSpring,
   motion,
-} from 'framer-motion'
+} from 'framer-motion';
 
-import { RANGE, SPRING_CONFIG } from './constants'
+import { RANGE, SPRING_CONFIG } from './constants';
 import {
   calculateMinHeight,
   setTransformRange,
   setTransformValues,
-} from './helpers'
+} from './helpers';
 
 export default function ParallaxItem({ yStart = 10, children }) {
-  const ref = useRef()
-  const [offsetTop, setOffsetTop] = useState(0)
-  const [minHeight, setMinHeight] = useState('auto')
-  const { scrollY } = useViewportScroll()
-  // useTransform takes a value and maps it to another one
-  // https://www.framer.com/api/motion/motionvalue#usetransform
+  const ref = useRef();
+  const [offsetTop, setOffsetTop] = useState(0);
+  const [minHeight, setMinHeight] = useState('auto');
+  const { scrollY } = useViewportScroll();
+
   const transformValue = useTransform(
     scrollY,
     setTransformRange(offsetTop),
     setTransformValues(RANGE)
-  )
-  // useSpring makes an animation that simulates spring physics for realistic motion.
-  // https://www.framer.com/api/motion/types/#spring
-  const y = useSpring(transformValue, SPRING_CONFIG)
+  );
+  const y = useSpring(transformValue, SPRING_CONFIG);
 
-  // useLayoutEffect will trigger only when the ref changes
-  // it sets a min-height to the parallax wrapper to avoid content (scrobbles) overlapping
   useLayoutEffect(() => {
     setOffsetTop(ref.current.offsetTop)
     setMinHeight(calculateMinHeight(RANGE)(ref.current.offsetHeight))
-  }, [ref])
+  }, [ref]);
 
   return (
     <div style={{ minHeight }}>
@@ -42,5 +37,5 @@ export default function ParallaxItem({ yStart = 10, children }) {
         {children}
       </motion.div>
     </div>
-  )
+  );
 }

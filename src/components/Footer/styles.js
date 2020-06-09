@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: ${DOVE_GRAY};
+  background-color: black;
   padding: 3rem 3rem;
 `;
 
