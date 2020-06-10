@@ -3,9 +3,10 @@ import { motion } from 'framer-motion';
 import { flexboxRow } from '../../styles/helpers';
 
 export const AboutWrapper = styled.div`
-  background-color: #000000c4;
-  height: 100vh;
-  display: grid;
+  background-color: #000000c9;
+  height: auto;
+  grid-template-rows: 10% 90%
+  padding: 20rem;
 `;
 
 export const AboutDescription = styled.section`
@@ -16,7 +17,6 @@ export const AboutDescription = styled.section`
   height: auto;
   color: white;
   text-align: left;
-  position: sticky;
 `;
 
 export const AboutTitle = styled.h3`

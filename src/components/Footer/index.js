@@ -5,7 +5,11 @@ import {
 } from './styles';
 
 export const Footer = () => (
-  <StyledFooter></StyledFooter>
+  <StyledFooter>
+    <hr />
+    <h5>This website is open source! Fork it on Github</h5>
+    <h5>Diego Montes 2020</h5>
+  </StyledFooter>
 );
 
 export default Footer;

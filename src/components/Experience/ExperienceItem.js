@@ -7,8 +7,9 @@ import { flexboxColumn, flexboxRow } from '../../styles/helpers';
 export const ExperienceItemWrapper = styled.section`
   display: grid;
   grid-template-columns: 20% 80%;
-  background-color: rgba(0, 0, 0, 0.72);
-  max-width: 683px;
+  max-width: 530px;
+  background: url('img/texture.jpeg') no-repeat;
+  background-size: cover;
   padding: 2rem 1rem 4rem 1rem;
 `;
 
@@ -22,7 +23,7 @@ export const WorkLink = styled.a`
 
 export const ItemLogo = styled.div`
   svg { 
-    width: 42px;
+    width: 82px;
     height: auto;
   }
 `;
@@ -34,20 +35,14 @@ export const ItemDescription = styled.article`
 
 export const Role = styled.h5`
   font-size: 18px;
-  color: white;
-  text-align: left;
 `;
 
 export const CompanyName = styled.h5`
   font-size: 18px;
-  color: white;
-  text-align: left;
 `;
 
 export const RoleDescription = styled.h5`
   font-size: 14px;
-  color: white;
-  text-align: left;
 `;
 
 export const ExperienceItem = ({ role, companyName, description, logo, url }) => (
@@ -61,7 +56,7 @@ export const ExperienceItem = ({ role, companyName, description, logo, url }) =>
         <RoleDescription>
           {description}
         </RoleDescription>
-        <WorkLink href={url} target='_blank'>{url}</WorkLink>/>
+        <WorkLink href={url} target='_blank'>{url}</WorkLink>
       </ItemDescription> 
     </ExperienceItemWrapper>
 );

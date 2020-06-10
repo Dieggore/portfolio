@@ -30,8 +30,6 @@ const ScrollableHero = () => {
     setImgInMap(temp);
   }, []);
 
-  console.log(imgMap);
-  const ImageComponent = imgMap.Q1;
   return (
     <HeroWrapper>
       <WelcomeWrapper>
@@ -42,12 +40,7 @@ const ScrollableHero = () => {
           Nice to meet you! 
         </GreetingLine>
       </WelcomeWrapper>
-      {/* <FrameAnimation {...DISOLVE_IN} data-src={getFrameValue(value)} /> */}
-      {/* {imgMap && React.createElement(imgMap.Q0)} */}
       {imgMap && imgMap[getFrameValueRaw(value)] && <FrameAnimation src={imgMap[getFrameValueRaw(value)].getAttribute('src')} />}
-      {/* <ImageComponent /> */}
-
-
       <About />
       <Experience />
     </HeroWrapper>
