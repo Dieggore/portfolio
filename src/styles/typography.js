@@ -7,15 +7,18 @@ export const ROBOTO = 'Titillium Web';
 
 export const typography = css`
   @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap'); 
-
   
   * {
-    text-align: center;
+    text-align: left;
     box-sizing: border-box;
   }
 
   body {
+    position: relative;
+    color: white;
     background-color: black;
+    max-width: 1500px;
+    margin: auto;
     font-family: '${ROBOTO}';
     font-size: 1rem;
     line-height: 1.25rem;
@@ -26,7 +29,7 @@ export const typography = css`
   }
 
   h1, h2, h3, h4, h5, h6, p {
-    color: ${BLACK_100};
+    color: white;
     @-moz-document url-prefix() {
       font-weight: lighter;
     }

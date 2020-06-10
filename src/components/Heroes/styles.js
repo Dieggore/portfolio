@@ -4,27 +4,27 @@ import { motion } from 'framer-motion';
 
 export const HeroWrapper = styled.section`
   display: grid;
-  height: 500vh;
   position: sticky;
-  
-  background: linear-gradient(180deg,rgba(0, 0, 0, 0.92) 0%,rgb(142, 140, 140) 8%,rgb(0, 0, 0) 12%);
-  //background: linear-gradient(180deg,rgba(255, 255, 255, 0.92) 0%,rgb(4, 4, 4) 11%,rgb(0, 0, 0) 100%);
 `;
 
 export const FrameAnimation = styled(motion.img)`
-  width: 80%;
+  width: 100%;
   margin: auto;
   height: auto;
   display: inline-block;
   object-fit: contain;
   position: sticky;
-  top: -10px;
+  top: 10px;
   z-index: -1;
 `;
 
 export const WelcomeWrapper = styled.article`
   ${flexboxColumn};
-  background-color: #0000007d;
+  // background-color: #0000007d;
+  justify-content: space-around;
+  height: 90vh;
+  padding-bottom: 2rem;
+  margin-top: 8rem;
 `;
 
 export const HelloLine = styled.h1`
@@ -34,6 +34,9 @@ export const HelloLine = styled.h1`
   line-height: 97px;
   text-align: center;
   color: white;
+  position: sticky;
+  top: 200px;
+  margin-bottom: 6rem;
   > span {
     font-size: 66px;
     color: #FBFF48;
@@ -47,6 +50,9 @@ export const GreetingLine = styled.h1`
   font-weight: normal;
   line-height: 73px;
   text-align: center;
+  position: sticky;
+  top: 300px;
+  margin-bottom: -8rem;
 `;
 
 
