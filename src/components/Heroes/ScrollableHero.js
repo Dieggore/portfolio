@@ -19,7 +19,7 @@ const ScrollableHero = () => {
   useEffect(() => y.onChange(v => setValue(v)), [y]);
   
   useEffect(() => {
-    let idx = 0;
+    let idx = 126;
     let temp = {};
     while(idx <= FINAL_FRAME_VALUE) {
       let img = new Image();
