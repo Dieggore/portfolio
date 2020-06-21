@@ -6,20 +6,20 @@ import { getFrameValue, getFrameValueRaw } from  './helpers';
 import About from '../About';
 import Experience from "../Experience";
 
-let INITIAL_FRAME_VALUE = 2;
-let FINAL_FRAME_VALUE = 284;
+let INITIAL_FRAME_VALUE = 1;
+let FINAL_FRAME_VALUE = 31;
 const imgPathBuilder = frameNumber => getFrameValue(frameNumber);
 
 const ScrollableHero = () => {
   const { scrollY } = useViewportScroll();
-  const y = useTransform(scrollY, [0, 2840], [INITIAL_FRAME_VALUE, FINAL_FRAME_VALUE]);
+  const y = useTransform(scrollY, [300, 3100], [INITIAL_FRAME_VALUE, FINAL_FRAME_VALUE]);
   const [value, setValue] = useState(0);
   const [imgMap, setImgInMap] = useState({});
 
   useEffect(() => y.onChange(v => setValue(v)), [y]);
   
   useEffect(() => {
-    let idx = 126;
+    let idx = 1;
     let temp = {};
     while(idx <= FINAL_FRAME_VALUE) {
       let img = new Image();
