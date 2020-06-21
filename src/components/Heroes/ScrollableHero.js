@@ -12,7 +12,7 @@ const imgPathBuilder = frameNumber => getFrameValue(frameNumber);
 
 const ScrollableHero = () => {
   const { scrollY } = useViewportScroll();
-  const y = useTransform(scrollY, [300, 3100], [INITIAL_FRAME_VALUE, FINAL_FRAME_VALUE]);
+  const y = useTransform(scrollY, [200, 3100], [INITIAL_FRAME_VALUE, FINAL_FRAME_VALUE]);
   const [value, setValue] = useState(0);
   const [imgMap, setImgInMap] = useState({});
 
