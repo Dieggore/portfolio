@@ -11,7 +11,7 @@ export const ROTATE_ON_HOVER = {
     ease: 'easeInOut',
     duration: 0.5,
   },
-}
+};
 
 export const ARRIVE_FROM_TOP = {
   animate: { y: 0, opacity: 1 },
@@ -20,7 +20,7 @@ export const ARRIVE_FROM_TOP = {
     ease: 'easeInOut',
     duration: 1,
   },
-}
+};
 
 export const DISOLVE_IN = {
   animate: { opacity: 1 },
@@ -29,4 +29,4 @@ export const DISOLVE_IN = {
     ease: 'easeInOut',
     duration: 1,
   },
-}
+};

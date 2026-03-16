@@ -48,6 +48,8 @@ const EXPERIENCE_ITEMS = [{
   logo: <AtlassianLogo />,
   url: "https://www.atlassian.com/software/trello",
 }];
+
+// https://marketplace.atlassian.com/apps/1218860/agile-retrospectives-for-jira?hosting=cloud&tab=overview√
 // zilkr
 // {
 //   description: `Zilkr lets any Telco sell Comms as an API. Its cloud gives networks an external Integration API while delivering the necessary Developer Program. Zilkr also seeds the ecosystem with products and partnerships.
@@ -64,9 +66,14 @@ export const Experience = () => (
   <ExperienceWrapper>
     <ExperienceTitle>Experience</ExperienceTitle>
     <div>
-      {EXPERIENCE_ITEMS.map(item => <ExperienceItem {...item} />)}
+      {EXPERIENCE_ITEMS.map((item, i) => <ExperienceItem key={`key_${i}`} {...item} />)}
     </div>
   </ExperienceWrapper>
 );
+
+
+
+
+
 
 export default Experience;

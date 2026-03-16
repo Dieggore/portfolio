@@ -23,9 +23,9 @@ export const NavWrapper = styled.nav`
 `;
 
 export const SocialLinksWrapper = styled.div`
-  ${flexboxRow};
-  justify-content: space-between;
-  width: 144px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 `;
 
 export const StyledHeader = styled(motion.header)`
@@ -37,7 +37,7 @@ export const StyledHeader = styled(motion.header)`
   z-index: 1;
   justify-content: space-between;
   height: 115px;
-  padding: 0rem 5rem;
+  padding: 0rem 2rem;
   position: sticky;
   
 `;

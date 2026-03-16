@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { flexboxRow } from '../../styles/helpers';
 
 export const ExperienceWrapper = styled.section`
-  height: 90vh;
+  height: auto;
   background-color: #000000c9;
   margin-bottom: 5rem;
   display: grid;
@@ -14,7 +14,6 @@ export const ExperienceWrapper = styled.section`
   padding: 3rem 0rem;
   div {
     display: grid;
-    grid-template-columns: 50% 50%;
     grid-gap: 2em;
   }
 `;
@@ -25,6 +24,7 @@ export const ExperienceTitle = styled.h3`
   font-weight: 600;
   position: sticky;
   top: 0;
+  align-self: center;
   font-size: 24px;
   //padding: 2rem;
   // margin-bottom: 2rem;

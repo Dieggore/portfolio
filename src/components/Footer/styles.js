@@ -5,6 +5,8 @@ export const StyledFooter = styled.footer`
   height: 5rem;
   background: black;
   width: 100%;
+  position:absolute;
+  bottom: 0px;
   
   hr {
     width: 70%;
@@ -21,7 +23,6 @@ export const StyledFooter = styled.footer`
 //   margin-bottom: 0.1rem;
 //   font-weight: normal;
 //   cursor: pointer;
-
 //   &:last-child {
 //     margin-bottom: 2rem;
 //   }

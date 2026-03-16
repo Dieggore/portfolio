@@ -6,10 +6,11 @@ import { flexboxColumn, flexboxRow } from '../../styles/helpers';
 
 export const ExperienceItemWrapper = styled.section`
   display: grid;
-  grid-template-columns: 20% 80%;
-  max-width: 530px;
-  background: url('img/texture.jpeg') no-repeat;
-  background-size: cover;
+  grid-template-rows: 30% 70%;
+  grid-template-columns: 30% 70%;
+  max-width: 320px;
+  //background: url('img/texture.jpeg') no-repeat;
+  //background-size: cover;
   padding: 2rem 1rem 4rem 1rem;
 `;
 
@@ -23,26 +24,28 @@ export const WorkLink = styled.a`
 
 export const ItemLogo = styled.div`
   svg { 
-    width: 82px;
+    width: 42px;
     height: auto;
   }
 `;
 
 export const ItemDescription = styled.article`
-  display: grid;
-  grid-template-rows: 10% 20%;
+  
 `;
 
 export const Role = styled.h5`
   font-size: 18px;
+  grid-row: 1;
 `;
 
 export const CompanyName = styled.h5`
   font-size: 18px;
 `;
 
-export const RoleDescription = styled.h5`
+export const RoleDescription = styled.p`
   font-size: 14px;
+  grid-column: 1 / span 2;
+  grid-row: 2;
 `;
 
 export const ExperienceItem = ({ role, companyName, description, logo, url }) => (
@@ -53,11 +56,11 @@ export const ExperienceItem = ({ role, companyName, description, logo, url }) =>
       <ItemDescription>
         <Role>{role}</Role>
         <CompanyName>{companyName}</CompanyName>
-        <RoleDescription>
-          {description}
-        </RoleDescription>
-        <WorkLink href={url} target='_blank'>{url}</WorkLink>
       </ItemDescription> 
+      <RoleDescription>
+        {description}
+      </RoleDescription>
+      <WorkLink href={url} target='_blank'>{url}</WorkLink>
     </ExperienceItemWrapper>
 );
 

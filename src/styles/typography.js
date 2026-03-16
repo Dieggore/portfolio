@@ -18,6 +18,8 @@ export const typography = css`
     color: white;
     background-color: black;
     max-width: 1500px;
+    min-width: 320px;
+    height: 100%;
     margin: auto;
     font-family: '${ROBOTO}';
     font-size: 1rem;
